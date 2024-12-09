@@ -1,0 +1,106 @@
+# FUNCOES BASICAS DE DICIONARIO
+# estoque={"botas":5,"casacos":5,"meias":4,"luvas":7,"aneis":10}
+# primeiro=list(estoque.items())[0]
+# ultimo=list(estoque.items())[-1]
+# print(primeiro,ultimo)
+# estoque["calças"]=20
+# estoque.update(meias=10)
+# print(estoque)
+# del estoque["casacos"]
+# print(estoque)
+# if 'meias' in estoque:
+#     print("Há meias no estoque")
+# else:
+#     print("Não há meias no estoque")
+# for i in estoque.keys():
+#     estoque.update({i:estoque[i]+10})
+# print(estoque)
+# ORGANIZACAO DE UMA BIBLIOTECA
+# livros={"Dom Quixote":3,"1984":4,"O Príncipe":6,"O Capital":5,"Os Sertões":2}
+# emprestimos={"Dom Quixote":0,"1984":0,"O Príncipe":0,"O Capital":0,"Os Sertões":0}
+# catalogo=list(livros.keys())
+# emprestado=None
+# while emprestado!="sair":
+#     print(f"O catálogo disponível é: {catalogo}")
+#     emprestado=input("Qual livro será emprestado?")
+#     if emprestado=="sair":
+#         break
+#     elif emprestado not in livros:
+#         print("Livro não encontrado")
+#         continue
+#     qtd=int(input("Quantos exemplares serão pegos?"))
+#     if qtd>livros.get(emprestado):
+#         print("Quantidade não disponível")
+#         continue
+#     livros.update({emprestado:livros[emprestado]-qtd})
+#     emprestimos.update({emprestado:emprestimos[emprestado]+qtd})
+# total=sum(list(emprestimos.values()))
+# total=sum(list(emprestimos.values()))
+# maior=max(emprestimos,key=emprestimos.get)
+# menor=min(livros,key=livros.get)
+# print(f"Total de livros emprestados: {total}\nLivro mais emprestado: {maior}\nLivro com menor estoque disponível: {menor}")
+# ANALISE DE VENDAS USANDO DICIONARIOS
+# def total_de_vendas(lista_vendas):
+#     qtd_vendida=sum(vendido["quantidade"] * (vendido["preço"]) for vendido in lista_vendas)
+#     return qtd_vendida
+# def media_vendas(lista_vendas):
+#     medias = {}
+#     for venda in lista_vendas:
+#         produto = venda['produto']
+#         total_vendas = venda['quantidade'] * venda['preço']
+        
+#         if produto not in medias:
+#             medias[produto] = {'total_vendas': total_vendas, 'quantidade': venda['quantidade']}
+        
+#         else:
+#             medias[produto]['total_vendas'] += total_vendas
+#             medias[produto]['quantidade'] += venda['quantidade']
+    
+#     for produto, dados in medias.items():
+#         medias[produto] = round(dados['total_vendas'] / dados['quantidade'],2)
+#     return medias
+# vendas = [{'produto':'arroz','quantidade':5,'preço':10},
+#     {'produto':'feijao','quantidade':3,'preço':7},
+#     {'produto':'macarrao','quantidade':4,'preço':15},
+#     {'produto':'frango','quantidade':2,'preço':16},
+#     {'produto':'frango','quantidade':5,'preço':12},
+#     {'produto':'arroz','quantidade':1,'preço':12},
+#     ]
+
+# total=total_de_vendas(vendas)
+# print(total)
+
+# media=media_vendas(vendas)
+# print(media)
+# SISTEMA DE NOTAS INCOMPLETO
+def adicionar(notas,nome):
+#     nota=[]
+#     nota.append(input("Insira, separada por virgulas, as notas do aluno: "))
+#     notas.update({nome:nota})
+#     print('Atualizado:',notas)
+
+# def atualizar(notas,aluno):
+#     if aluno not in notas:
+#         print("Aluno não encontrado.")
+#     else:
+#         nota=input("Insira a nova nota: ")
+#         unidade=int(input("Insira de qual das 3 unidades a nota será alterada:"))
+#         if unidade>3 or unidade<1:
+#             print("Unidade inexistente.")
+#         else:
+#             liste=notas[aluno]
+#             print(liste)
+#             valor=(unidade-1)
+#             print(valor)
+#             liste.remove(valor)
+#             print(liste)
+#             liste.insert((unidade-1),nota)
+#             print(liste)
+
+
+
+
+
+# notas={"João":[8,7,9],"Ana":[7,7,6],"Pedro":[10,5,6]}
+# adicionar(notas,"Dante")
+# atualizar(notas,"Dante")
