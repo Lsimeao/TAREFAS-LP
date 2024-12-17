@@ -1,30 +1,18 @@
 # criar uma lista em forma de dicionario
-estoque={}
-estoque["lapis"]=1
-estoque["borracha"]=2
-estoque["caneta"]=3
+estoque={"lapis":1,"borracha":2,"caneta":3}
 print(estoque)
-# atualizar produto e quantidade
-def novo_produto():
-    prod_novo=input("informe o produto novo:")
-    return prod_novo
-prod_novo=novo_produto()
-quant=int(input("informe a quantidade do novo produto:"))
-estoque [prod_novo]=quant
+item1=list(estoque.items())[0]
+item2=list(estoque.items())[1]
+print(item1,item2)
+estoque.update(caderno=5)
 print(estoque)
-def nova_quant():
-    quantidade=int(input("informe a quantidade atualizada:"))
-    return quantidade
-quantidade=nova_quant()
-produto_atualizado=input("informe o produto a ser atualizado:")
-estoque[produto_atualiazado]=quantidade
-# remover produto
-def remover_produto():
-    produto=input("informe o produto a ser removido:")
-    return produto
-produto=remover_produto()
-
-del estoque[produto]
+del estoque["caderno"]
 print(estoque)
-
+if 'lapis' in estoque:
+    print("tem lapis no estoque")
+else:
+    print("nao tem lapis no estoque")
+for i in estoque.keys():
+    estoque.update({i:estoque[i]+10})
+print(estoque)
 
