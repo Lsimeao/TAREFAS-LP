@@ -1,0 +1,74 @@
+# QUESTÃO 1
+def calcular_quant_por_tipo(despesas):
+    return{tipo:len(valores) for tipo,valores in despesas.items()}
+    
+def descobrir_maior_menor_gastos_por_tipo(despesas):
+    return{tipo:{'maior':max(valores), 'menor':min(valores)} for tipo,valores in despesas.items()}
+    
+def calcular_total_gastos(despesas):
+    return{tipo:sum(valores) for tipo,valores in despesas.items()}
+despesas={
+    'alimentaçao': [10,50,150],
+    'moradia': [200,100,250],
+    'lazer': [50,150,200]
+}
+quant_por_tipo=calcular_quant_por_tipo(despesas)
+maior_menor_por_tipo=descobrir_maior_menor_gastos_por_tipo(despesas)
+total_gastos_por_tipo=calcular_total_gastos(despesas)
+
+print("quantidade de despesas por tipo:",quant_por_tipo)
+print("maior e menor gasto por tipo:",maior_menor_por_tipo)
+print("total de gastos por tipo:",total_gastos_por_tipo)
+
+
+# QUESTÃO 2
+def inserir_aluno(alunos):
+    nome=input("informe o nome do aluno:")
+    nota=[]
+    for i in range(3):
+        nota=float(input(f"digite a nota {i+1}:"))
+        notas.append(nota)
+    alunos[nome]=notas
+    print(f"Aluno {nome} inserido com sucesso!\n")
+    
+def remover_aluno(alunos):
+    nome=input("informe o nome do aluno a ser removido:")
+    if nome in alunos:
+        del alunos[nome]
+        print(f"aluno nao encontrado.\n")
+def editar_nota(alunos):
+    nome(input("informe o nome do aluno:"))
+    if nome in alunos:
+        print(f"notas atuais de {nome}: {alunos[nome]}")
+        unidade=int(input("informe o numero da unidade (1,2,3) para editar a nota:"))
+        if 1<=unidade<=3:
+            nova_nota=float(input("digite a nova nota:"))
+            aluno[nome][unidade-1]=nova_nota
+            print(f"a nota da unidade {unidade} {nome} atualizada para {nova_nota}.\n ")
+        else:
+            print("unidade invalida.\n")
+    else:
+        print("aluno nao encontrado.\n")
+        
+def menu():
+    alunos={}
+    while true:
+        print("escolha uma opçao:")
+        print("1. inserir aluno")
+        print("2. editar nota")
+        print("3. remover aluno")
+        print("4. sair")
+        opçao=input("digite sua escolha:")
+        
+        if opçao =="1":
+            inserir_aluno(alunos)
+        elif opçao =="2":
+            editar_nota(alunos)
+        elif opçao=="3":
+            remover_aluno(alunos)
+        elif opçao=="4":
+            print("enerrando o programa!")
+            break
+        else:
+            print("opçao invalida,tente novamente.\n")         
+        
